@@ -13,6 +13,8 @@ During the creation process, many users told us it could also be a nice game sta
 The SHARPIKEEBO will be sold fulled assembled. We plan to start a www.crowdsupply.com crowd funding campaign for this. 
 Please follow me on twitter: @sulfuroid
 
+![alt text](https://github.com/ccadic/sharpikeebo/blob/main/20220126_232755.jpg)
+
 
 The SHARPIKEEBO carrier board has been designed to hold both a Raspberry(R) PI ZERO 2W or W + 2.7"  (400x240) Sharp Memory Display. This display is capable of a fast refresh which allows the use of linux shells or display game images. A true USB Keyboard (driven by QMK firmware, so fully customized) has been added on the board.
 
