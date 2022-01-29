@@ -24,6 +24,9 @@ The board also has 5 buttons you may also control via GPIO voltage detection (UP
 
 And more, you have UART GPIO and I2C GPIO easily available on board should you want to add a 3.3v or 5v module such a GPS , 4g or 5g modem etc ...
 
+![alt text](https://github.com/ccadic/sharpikeebo/blob/main/20220120_140352.jpg)
+
+
 The board + RPI can be powered thought a USB C connector.  The board has also been design to behave as a USB keyboard you can plug on a desktop or laptop or rack server. 
 
 
