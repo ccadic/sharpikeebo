@@ -1,0 +1,3 @@
+1) raspi-config --> boot to terminal, not desktop
+2) edit /boot/config.txt for custom 400x240 video mode
+3) auto-start my frame buffer copy tool
