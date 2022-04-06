@@ -1,6 +1,8 @@
 # sharpikeebo V1.1
 Miniature RPI Zero 2W shield with Sharp memory Display and USB Beyboard
 
+We are launching a Crowdfunding campaign here: https://www.crowdsupply.com/morpheans/sharpikeebo
+
 ![alt text](https://github.com/ccadic/sharpikeebo/blob/main/MemoryBrakoutX20.jpg)
 
 Hello all.
