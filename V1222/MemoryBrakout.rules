@@ -1,0 +1,126 @@
+
+(rules PCB MemoryBrakout
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 4535)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.8)
+      (against_preferred_direction_trace_costs 3.5)
+    )
+    (layer_rule In1.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+    (layer_rule In2.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.7)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.8)
+      (against_preferred_direction_trace_costs 2.4)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-3]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_800:400_um" "Via[0-3]_800:400_um" default
+  )
+  (via 
+    "Via[0-3]_800:400_um-kicad_default" "Via[0-3]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-3]_800:400_um-ANT" "Via[0-3]_800:400_um" ANT
+  )
+  (via_rule
+    default "Via[0-3]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-3]_800:400_um-kicad_default"
+  )
+  (via_rule
+    ANT "Via[0-3]_800:400_um-ANT"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu In2.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND /DISPON +3V3 /SDA /SCL /TXD /RXD /BUT1
+    /CS /EXTCOMIN /BUT2 /BUT3 /BUT4 /BUT5 /EXTMODE XTAL1
+    XTAL2 5volts UCAP ROW0 ROW1 ROW2 ROW3 ROW4
+    COL0 COL1 COL2 COL3 COL4 COL5 COL6 COL7
+    COL8 COL9 COL10 COL11 D+ "D-" /BAT+ /MOSI
+    /SCK MISOA SCKA MOSIA RESETA /VBUS5v /RESETR "Net-(D201-Pad2)"
+    "Net-(D202-Pad2)" "Net-(D203-Pad2)" "Net-(D204-Pad2)" "Net-(D205-Pad2)" "Net-(D206-Pad2)" "Net-(D207-Pad2)" "Net-(D208-Pad2)" "Net-(D209-Pad2)"
+    "Net-(D210-Pad2)" "Net-(D211-Pad2)" "Net-(D212-Pad2)" "Net-(D213-Pad2)" "Net-(D214-Pad2)" "Net-(D215-Pad2)" "Net-(D216-Pad2)" "Net-(D217-Pad2)"
+    "Net-(D218-Pad2)" "Net-(D219-Pad2)" "Net-(D220-Pad2)" "Net-(D221-Pad2)" "Net-(D222-Pad2)" "Net-(D223-Pad2)" "Net-(D224-Pad2)" "Net-(D225-Pad2)"
+    "Net-(D226-Pad2)" "Net-(D227-Pad2)" "Net-(D228-Pad2)" "Net-(D229-Pad2)" "Net-(D230-Pad2)" "Net-(D231-Pad2)" "Net-(D232-Pad2)" "Net-(D233-Pad2)"
+    "Net-(D234-Pad2)" "Net-(D235-Pad2)" "Net-(D236-Pad2)" "Net-(D237-Pad2)" "Net-(D238-Pad2)" "Net-(D239-Pad2)" "Net-(D240-Pad2)" "Net-(D241-Pad2)"
+    "Net-(D242-Pad2)" "Net-(D243-Pad2)" "Net-(D244-Pad2)" "Net-(D245-Pad2)" "Net-(D246-Pad2)" "Net-(D247-Pad2)" "Net-(D248-Pad2)" "Net-(D249-Pad2)"
+    "Net-(D250-Pad2)" "Net-(D251-Pad2)" "Net-(D252-Pad2)" "Net-(D253-Pad2)" "Net-(D254-Pad2)" "Net-(D255-Pad2)" "Net-(D256-Pad2)" "Net-(D257-Pad2)"
+    "Net-(D258-Pad2)" "Net-(D259-Pad2)" "Net-(D260-Pad2)" /BOOTR /SWDIO /SWCLK "Net-(J102-Pad1)" "Net-(J102-Pad2)"
+    "Net-(J102-Pad3)" "Net-(J102-Pad4)" "Net-(J105-Pad1)" "Net-(J111-PadA7)" "Net-(J111-PadA6)" "Net-(J111-PadB5)" "Net-(J111-PadA5)" "Net-(R101-Pad1)"
+    "Net-(R105-Pad1)" "Net-(R107-Pad1)" "Net-(R109-Pad1)" "Net-(R111-Pad2)" "Net-(R112-Pad2)" "Net-(R113-Pad1)" "Net-(R118-Pad2)" /I17
+    /I27 /VIOLED /MISO /I5 /I19 /I29 "Net-(D101-Pad2)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu In2.Cu B.Cu)
+    )
+  )
+  (class ANT
+    (clearance_class ANT)
+    (via_rule ANT)
+    (rule
+      (width 600.0)
+    )
+    (circuit 
+      (use_layer F.Cu In1.Cu In2.Cu B.Cu)
+    )
+  )
+)
