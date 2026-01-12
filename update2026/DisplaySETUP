@@ -1,0 +1,19 @@
+Installation
+
+If the board and display come separate, please connect the display's ribbon to the white connector,
+ribbon contacts facing the board surface.
+
+Software setup
+
+The Buttons and LEDs are controllable using classic python scripts.
+For the display, you have to install 2 libraries/code and compile them
+
+1° ONE BITE DISPLAY LIB: https://github.com/bitbank2/OneBitDisplay
+Install with git clone https://github.com/bitbank2/OneBitDisplay
+Go to /linux/Sharp_LCD directory and type make.
+
+2° ARMBIANIO LIB: https://github.com/bitbank2/ArmbianIO
+Install the lib with git clone https://github.com/bitbank2/ArmbianIO
+and make
+Go back to Go to /linux/Sharp_LCD directory and run the compiled executable ./sharp_lcd
+
