@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name RAK3172h-breadboard-rescue)(type Legacy)(uri ${KIPRJMOD}/RAK3172h-breadboard-rescue.lib)(options "")(descr ""))
+)
