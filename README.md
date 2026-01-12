@@ -3,7 +3,7 @@ Miniature RPI Zero 2W shield with Sharp memory Display and USB Beyboard
 
 We are launching a Crowdfunding campaign here: https://www.crowdsupply.com/morpheans/sharpikeebo
 
-![alt text](https://github.com/ccadic/sharpikeebo/blob/main/MemoryBrakoutX20.jpg)
+![alt text](https://github.com/ccadic/sharpikeebo/blob/main/MemoryBrakoutX21.jpg)
 
 Hello all.
 This is the SHARPIKEEBO Nano Computer shield, built around the famous Raspberry PI Zero 2W , the high quality SHARP Mempory Display (400x240 pixels),
@@ -15,7 +15,7 @@ During the creation process, many users told us it could also be a nice game sta
 The SHARPIKEEBO will be sold fulled assembled. We plan to start a www.crowdsupply.com crowd funding campaign for this. 
 Please follow me on twitter: @sulfuroid
 
-![alt text](https://github.com/ccadic/sharpikeebo/blob/main/20220126_232755.jpg)
+
 
 
 The SHARPIKEEBO carrier board has been designed to hold both a Raspberry(R) PI ZERO 2W or W + 2.7"  (400x240) Sharp Memory Display. This display is capable of a fast refresh which allows the use of linux shells or display game images. A true USB Keyboard (driven by QMK firmware, so fully customized) has been added on the board.
@@ -26,7 +26,7 @@ The board also has 5 buttons you may also control via GPIO voltage detection (UP
 
 And more, you have UART GPIO and I2C GPIO easily available on board should you want to add a 3.3v or 5v module such a GPS , 4g or 5g modem etc ...
 
-![alt text](https://github.com/ccadic/sharpikeebo/blob/main/20220120_140352.jpg)
+
 
 
 The board + RPI can be powered thought a USB C connector.  The board has also been design to behave as a USB keyboard you can plug on a desktop or laptop or rack server. 
