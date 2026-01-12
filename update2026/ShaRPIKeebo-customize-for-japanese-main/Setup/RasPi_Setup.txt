@@ -1,0 +1,63 @@
+1. RaspbianOS のセットアップ
+	Raspberry Pi Imager 1.7.1以降を使って RaspbianOS 32bit Lite を microSDカードへインストールする。
+		[CHOOSE OS] → [Raspberry Pi OS(other)] → [Raspberry Pi OS Lite (32-bit)]
+		[歯車]
+			[V] Disable overscan
+			[ ]
+			[V] Enable SSH
+				(V) Use password autherication
+			[ ] Set username and password
+			[V] Configure wifi
+				[SSID] SSID入力
+				[ ] Hidden SSID
+			[V] Set locale settings
+				Time zone : Asia/Tokyo
+
+2. RaspberryPiLite の設定
+	2.0. 最初にやること
+		$ sudp apt-get update
+		$ sudp apt-get upgrade
+
+	2.1. 日本語環境の設定
+		$ sudo apt-get install uim-fep uim-anthy fonts-noto-mono fbterm
+		$ nano .bashrc
+
+			ファイルの最後に下記を追加して保存する。
+			alias fbterm='env LANG=ja_JP.UTF8 fbterm uim-fep'
+			export TERM=fbterm
+			fbterm
+
+	2.2. CLI のエディタ ne, ファイラー fd をインストールする
+		$ sudo apt-get install ne fdclone
+
+	2.3. samba をインストールする
+		$ sudo apt-get install samba samba-common-bin
+		$ sudo mkdir /share
+		$ sudo chmod 777 /share
+		$ sudo nano /etc/samba/smb.conf
+
+			ファイルの最後に下記を追加して保存する。
+			[share]
+			Comment = Pi shared directory
+			Path = /share
+			Browseable = yes
+			Writeable = yes
+			only guest = no
+			create mask = 0777
+			directory mask = 0777
+			Public = yes
+			Guest ok = yes
+
+			[pi]
+			Comment = Pi home directory
+			Path = /home/pi
+			Browseable = yes
+			Writeable = yes
+			only guest = no
+			create mask = 0777
+			directory mask = 0777
+			Public = yes
+			Guest ok = yes
+
+		$ sudo smbpasswd -a pi
+		$ sudo systemctl restart smbd

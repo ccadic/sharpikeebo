@@ -1,0 +1,12 @@
+[Unit]
+Description=sharp_terminal
+Requires=basic.target pigpiod.service
+After=basic.target pigpiod.service
+
+[Service]
+ExecStart=/usr/local/bin/sharp_terminal --
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
