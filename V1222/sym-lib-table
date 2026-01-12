@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name MemoryBrakout-rescue)(type Legacy)(uri ${KIPRJMOD}/MemoryBrakout-rescue.lib)(options "")(descr ""))
-)
