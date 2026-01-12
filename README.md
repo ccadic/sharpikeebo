@@ -1,5 +1,7 @@
 SHARPIKEEBO – Version 2025 (Public Release)
 
+<img src="https://github.com/ccadic/sharpikeebo/blob/main/MemoryBrakoutX18.jpg">
+
 sharpikeebo – V2025
 Miniature Raspberry Pi Zero 2W shield with Sharp Memory Display and USB Keyboard
 
