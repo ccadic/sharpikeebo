@@ -1,4 +1,0 @@
-Minor correction on the SharpiKeeBo
-The BAT- pin connector has a mistake and is not attached to GND of the PCB
-Tou have to solder a wire from BAT- (batt connector) to any GND pin on the board.
-This will allow the battery to charge and to deliver power to the all system
