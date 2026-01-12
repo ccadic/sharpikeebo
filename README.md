@@ -1,34 +1,118 @@
-# sharpikeebo V1.1
-Miniature RPI Zero 2W shield with Sharp memory Display and USB Beyboard
+SHARPIKEEBO – Version 2025 (Public Release)
 
-We are launching a Crowdfunding campaign here: https://www.crowdsupply.com/morpheans/sharpikeebo
+sharpikeebo – V2025
+Miniature Raspberry Pi Zero 2W shield with Sharp Memory Display and USB Keyboard
 
-![alt text](https://github.com/ccadic/sharpikeebo/blob/main/MemoryBrakoutX21.jpg)
+This repository now documents the public 2025 version of the SHARPIKEEBO, distributed after the successful crowdfunding campaign on
+Crowd Supply: https://www.crowdsupply.com/morpheans/sharpikeebo
 
-Hello all.
-This is the SHARPIKEEBO Nano Computer shield, built around the famous Raspberry PI Zero 2W , the high quality SHARP Mempory Display (400x240 pixels),
-a QMK Firmware (https://docs.qmk.fm/#/) USB keyboard based on an ATMEGA32U4 uC with a true mini PC keyboard.
+All hardware described here corresponds to the final production version delivered to backers and the public.
 
-This tool has been designed to help system administrators have a nice very little tool to ssh to a server and perform administration operations. 
-During the creation process, many users told us it could also be a nice game station.
+Overview
 
-The SHARPIKEEBO will be sold fulled assembled. We plan to start a www.crowdsupply.com crowd funding campaign for this. 
-Please follow me on twitter: @sulfuroid
+Hello all,
+
+This is the SHARPIKEEBO Nano Computer Shield, built around the famous Raspberry Pi Zero 2W, featuring:
+
+A high-quality Sharp Memory Display (400 × 240 pixels)
+
+A true USB keyboard, powered by QMK firmware
+(https://docs.qmk.fm/#/)
+
+An ATmega32U4 microcontroller
+
+A compact form factor designed as a real miniature Linux terminal
+
+The SHARPIKEEBO was initially designed as a portable SSH and system administration tool, allowing administrators to quickly connect to servers and perform maintenance operations.
+During development, many users also pointed out its potential as a retro or lightweight gaming platform.
+
+All SHARPIKEEBO units were sold fully assembled.
+
+Hardware Description
+
+The SHARPIKEEBO carrier board is designed to host:
+
+A Raspberry Pi Zero 2W or Zero W
+
+A 2.7" Sharp Memory Display (400 × 240) capable of fast refresh rates, suitable for:
+
+Linux shells
+
+Text-based interfaces
+
+Simple graphical games
+
+Additional features include:
+
+4 independently controllable LEDs (GPIO, usable from C++ or Python)
+
+5 physical buttons, readable via GPIO voltage detection (UP/DOWN logic)
+
+Easily accessible UART and I²C GPIOs for external modules:
+
+GPS
+
+4G / 5G modem
+
+Other 3.3 V or 5 V peripherals
+
+Power is supplied via USB-C, and the board can also behave as a USB keyboard device when plugged into a desktop, laptop, or rack server.
 
 
+IMPORTANT CHANGES & CLARIFICATION (READ CAREFULLY)
 
+This section is critical for proper operation of the 2025 public hardware.
 
-The SHARPIKEEBO carrier board has been designed to hold both a Raspberry(R) PI ZERO 2W or W + 2.7"  (400x240) Sharp Memory Display. This display is capable of a fast refresh which allows the use of linux shells or display game images. A true USB Keyboard (driven by QMK firmware, so fully customized) has been added on the board.
+ Raspberry Pi Zero mounting orientation (VERY IMPORTANT)
 
-The board also has 4 independently controllable LEDs you can switch on/off with classic GPIO commands (C++ or Python)
+The Raspberry Pi Zero must be mounted with its connector facing DOWN
 
-The board also has 5 buttons you may also control via GPIO voltage detection (UP/Down voltage detection).  You can use this board for gaming.
+This means the components of the Raspberry Pi remain visible
 
-And more, you have UART GPIO and I2C GPIO easily available on board should you want to add a 3.3v or 5v module such a GPS , 4g or 5g modem etc ...
+DO NOT use a 20×2 pin header mounted on the TOP side
 
+If the Raspberry Pi is connected using a top-mounted 20×2 pin header, the board will NOT work
 
+ This is not optional and is required by the electrical design of the SHARPIKEEBO.
 
+ Battery polarity warning
 
-The board + RPI can be powered thought a USB C connector.  The board has also been design to behave as a USB keyboard you can plug on a desktop or laptop or rack server. 
+Some batteries on the market do NOT follow standard polarity orientation
 
+Incorrect polarity can permanently damage the board
 
+ Always verify battery polarity against the schematics before connecting
+ Never assume wire colors are correct
+
+ RAK Wireless module interface
+
+The RAK Wireless module is connected in UART mode
+
+It is NOT wired in SPI mode
+
+ Any software configuration must therefore use UART, not SPI.
+
+ Factory testing guarantee
+
+Every single SHARPIKEEBO unit shipped has been individually tested
+
+All boards were:
+
+Powered
+
+Verified
+
+Confirmed fully functional before shipping
+
+If you encounter an issue, it is almost always related to:
+
+Incorrect Raspberry Pi mounting
+
+Battery polarity inversion
+
+Incorrect peripheral wiring or configuration
+
+Status
+
+This repository now reflects the final, stable, production hardware shipped after the Crowd Supply campaign.
+Future updates will focus on software examples, configurations, and community contributions, not hardware changes.
