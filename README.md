@@ -76,6 +76,7 @@ If the Raspberry Pi is connected using a top-mounted 20×2 pin header, the board
  This is not optional and is required by the electrical design of the SHARPIKEEBO.
 
  Battery polarity warning
+ <img src="bat1.jpg">
 
 Some batteries on the market do NOT follow standard polarity orientation
 
